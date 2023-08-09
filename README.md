@@ -1,1 +1,1 @@
-# Java-Lambdas-Streams-InterfacesGraficas
+# Aplicações Gráficas com os Novos Recusos do JAVA

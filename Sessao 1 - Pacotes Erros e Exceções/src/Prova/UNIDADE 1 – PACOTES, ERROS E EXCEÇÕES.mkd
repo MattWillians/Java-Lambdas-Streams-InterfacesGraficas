@@ -1,0 +1,273 @@
+```
+Aluno: Matheus Willians de Paula Perera
+Matéria: JAVA 8 PARA WEB
+Disciplina: 2ª DISCIPLINA – PACOTES, TRATAMENTO DE EXCEÇÕES, APPLETS, GENÉRICOS, COLLECTIONS, LAMBDAS, STREAMS E INTERFACES GRÁFICAS
+Sessão: Sessão 1
+
+Nota Final: 10.0
+```
+
+<h3>1.[UFMT - 2012 - UFMT] Sobre o tratamento de
+    exceções em Java, assinale a afirmativa
+    INCORRETA</h3>
+
+- (a) Uma exceção é sempre um objeto do tipo Throwable
+- (b) A classe java.sql.SQLException é uma exceção definida na API JDBC
+- (c) As exceções em Java são fixas e não é possível definir novas exceções
+- (d) A cláusula finally é sempre executada quando existente em um bloco try/catch
+
+<strong>R: Resposta incorreta: (C)</strong>
+
+<h3>2.[AOCP - 2012 - BRDE] Na linguagem Java,
+    podemos trabalhar com exceções. Sobre esses
+    conceitos, analise as assertivas e assinale a alternativa
+    que aponta as corretas </h3>
+
+- I. As exceções são eventos inesperados que ocorrem
+durante a execução de um programa. Uma exceção pode
+ser o resultado de uma condição de erro ou
+simplesmente uma entrada inesperada. De qualquer
+forma, em linguagens orientadas a objetos como Java, as
+exceções são vista como objetos.
+
+- II. Em Java, exceções são lançadas por trechos de código
+que detectam algum tipo de condições inesperadas.
+Podem também ser lançadas pelo ambiente de execução
+Java se este encontra uma situação imprevista.
+
+- III. A sintaxe genérica para um bloco try-catch em Java é
+a seguinte:
+
+```java
+    try{
+        <bloco de codigo>
+    } catch (<excessão> <identificador>) {
+        <tratamento1>
+    } catch ...
+
+    } finally (<excessão> <identificador>) {
+        <tratamento>
+    }
+```
+
+- IV. Em Java, podemos capturar uma exceção ocorrida
+através de trechos de código capazes de tratá-la.
+
+<strong>Está correto o que consta em</strong>
+
+- (a) Apenas II e III
+- (b) Apenas I e III
+- (c) Apenas I, II e III
+- (d) Apenas I, II e IV
+- (e) I, II, III e IV
+
+<strong>R: Resposta correta: (D)</strong>
+
+<h3>3.[CIAAR - 2012 - CIAAR] Em Java, uma exceção é
+uma indicação de um problema que ocorre durante a
+execução de um programa. O tratamento de exceções
+permite aos programadores criar aplicativos que
+podem resolver exceções. Sobre hierarquia de
+exceções</h3>
+
+<strong>assinale abaixo a alternativa incorreta.</strong>
+
+- (a) A classe Throwable tem duas subclasses: Exception e
+Error
+
+- (b) O Java distingue entre duas categorias de exceções:
+verificadas e não verificadas
+
+- (c) Todas as classes de exceção do Java herdam direta ou
+indiretamente da classe Exception
+
+- (d) Os programadores devem estender a hierarquia de
+exceções do Java em suas próprias classes de execução
+
+<strong>A resposta incorreta é a (D)</strong>
+
+<h3>4.[CESPE - 2014 – ANATEL] Com relação às
+    técnicas de avaliação de sistemas e tratamento de
+    exceções, julgue o item seguinte.</h3>
+
+<p>A linguagem Java possui checked exceptions que
+   estendem java.lang.Exception, em que o compilador
+   força o programador a capturar tais exceções. Essas
+   exceções devem ser tratadas com um bloco try-catch
+   ou com um throws.</p>
+
+<strong>Esta afirmação esta...</strong>
+- (a) Certo
+- (b) Errado
+
+<strong>Esta certa (a)</strong>
+
+<h3>5.[CESGRANRIO - 2011 - FINEP] Sejam as
+    seguintes classes Java:</h3>
+
+```java
+    public class Teste {
+        private Integer x;
+
+        public Teste(){
+            x = 10;
+        }
+
+        public Teste(int c, int d){
+            x = c + d;
+        }
+
+        public int getx(){
+            return x;
+        }
+
+        public void m1(int a) {
+            int p;
+
+            try {
+                p = x%a;
+                if( p < 4) {
+                    throw new Exc01();
+                }
+            } catch(Exc01 e){
+                x += 5;
+                return;
+            } catch (Exception e){
+                x +=7;
+                return;
+            } finally {
+                x += 9;
+            }
+            return;
+        }
+    }
+
+    public class Q01 {
+        public static void main(String[] args) {
+            Teste t = new Teste(1, 2);
+
+            t.m1(5);
+
+            System.out.Println(t.getx());
+        }
+    }
+```
+
+<strong>O que será exibido no console quando da execução da
+função main() acima?</strong>
+
+- (a) 19
+- (b) 17
+- (c) 14
+- (d) 10
+- (e) 8
+
+<strong>A resposta correta é a letra (B)</strong>
+
+<h3>6.[CESGRANRIO] - 2011 - [Transpetro] Analisando se o código abaixo, escrito na linguagem java,
+conclui-se, quanto à compilação e à execução, que o
+programa</h3>
+
+```java
+
+1 class EX {
+2    public static void f() {
+3        throw new RuntimeException("Não Implementada");
+4    }
+5
+6    public static void main(String[] args) {
+7        System.out.Println("Inicio");
+8        f();
+9        System.out.Println("Fim");
+10    }
+11 }
+
+```
+
+- (a) Não compila e não executa, pois falta, na linha 3, “
+throws RuntimeException”, indicando que a função f
+pode lançar exceções
+
+- (b) Não compila e não executa, pois a linha 8 deveria
+estar envolvida por uma construção try/catch, uma vez
+que a função f pode lançar uma exceção do tipo
+RuntimeException
+
+- (c) Compila e, ao executar, imprime 3 mensagens na
+saída padrão: INICIO, Não implementada e FIM
+
+- (d) Compila e, ao executar, imprime, na saída padrão,
+INICIO, Não implemetada e, em seguida, o programa é
+abortado
+
+- (e) Compila e, ao executar, imprime, na saída padrão,
+INICIO e, em seguida, é abortado, imprimindo, na saída
+de erro, o rastro da pilha, incluindo a mensagem “Não
+implementada”
+
+<strong>Resposta (E)</strong>
+
+<h3>7.[FCC - 2011 - TRE/AP] Em JavaDoc a tag @since</h3>
+
+- (a) Especifica que o componente sendo comentado é
+válido, a partir de uma determinada versão
+
+- (b) Indica que o método/atributo não é mais suportado
+
+- (c) Mostra um parâmetro que será passado a um método
+
+- (d) Documenta uma associação a outro método ou classe
+
+- (e) Documenta uma exceção lançada por um método
+
+<strong>Resposta (A)</strong>
+
+<h3>8.Uma classe A está definida no pacote com.test.xyz.
+O arquivo da classe será armazenado em /java/MyPackages/com/txt/xyz. O classpath deve ser
+setado com qual dos caminhos a seguir?</h3>
+
+(a)/java/MyPackages/com/test/xyz
+(b)/java/MyPackages/com/test
+(c)/java/MyPackages
+(d)/java
+(e)/MyPackages
+
+<strong>Resposta (C)</strong>
+
+<h3>9. Qual será o resultado de tentar compilar e
+executar o programa abaixo?</h3>
+
+```java
+public static void main(String[] args) {
+
+    String s = "HELLO|23";
+    Formatter f = new Formatter();
+
+    f.format("%s", s);
+    System.out.println(f);
+
+}
+```
+
+- (a) Código não compila pois f() não declara que lança RuntimeException
+- (b) Compila e imprime "HELLO123"
+- (c) Compila e imprime "catch"
+- (d) Compila e imprime "finally"
+- (e) Compila e executa sem nenhuma saída
+
+<strong>Resposta (B)</strong>
+
+<h3>10. Para incluir um arquivo JAR no classpath, o
+    caminho deve referenciar o próprio nome do arquivo
+    JAR?</h3>
+
+- (a) Certo
+- (b) Errado
+
+<strong>Resposta (A)</strong>
+
+```
+GABARITO
+1 – C; 2 – D; 3 – D; 4 – A; 5 – B; 6 – E; 7 – A; 8 – C;
+9– B; 10 – A
+```

@@ -1,0 +1,228 @@
+```
+Aluno: Matheus Willians de Paula Perera
+Matéria: JAVA 8 PARA WEB
+Disciplina: 2ª DISCIPLINA – PACOTES, TRATAMENTO DE EXCEÇÕES, APPLETS, GENÉRICOS, COLLECTIONS, LAMBDAS, STREAMS E INTERFACES GRÁFICAS
+Sessão: Sessão 2
+
+Nota Final: 9.0
+```
+
+
+```
+1.[CIAAR - 2012 - CIAAR] Analise as afirmativas
+abaixo sobre applets em Java.
+
+I. A classe JApplet do pacote javax.swing não é utilizada
+para criar applets.
+
+II. Normalmente, um applet e seu documento XHTML
+correspondente não são armazenados no mesmo
+diretório.
+
+III. Cada applet Java é uma interface gráfica com o
+usuário em que se pode desenhar ou colocar
+componentes GUI.
+
+IV. Um contëiner de applets pode criar apenas objetos de
+classes public e estender a JApplet (ou a classe Applet
+nas versões anteriores do Java). 
+```
+
+Está(ão) correta(s)
+apenas a(s) afirmativa(s)
+
+(a) II
+(b) III  
+(c) III e IV  
+(d) I,II e IV
+
+RESPOSTA: Letra C
+
+```
+2.[FCC - 2010 - AL/SP] Sobre a applets Java,
+considere:
+
+I. São programas Java que podem ser incorporados a
+documentos HTML.
+
+II. Quando um navegador carrega uma página web
+contendo um applet, ele é baixado no navegador web e
+executado.
+
+III. A instrução "<"applet height="300" width="400"
+code="jogo.java">" é um exemplo válido de tag de
+inclusão de uma applet em uma página HTML.
+
+IV. Os métodos de ciclo de vida de uma applet são init,
+start e destroy.
+```
+
+Está correto o que se afirma APENAS em
+
+(a) I e II
+(b) I, II e III
+(c) II e III
+(d) II, III e IV
+(e) III e IV
+
+RESPOSTA: Letra A
+
+```
+3.[CESPE - 2010 - Banco da Amazônia] O JWS (Java
+Web Start), tecnologia de implantação de aplicativos
+Java, é fácil de ser implementado, pois basta a
+instalação do aplicativo em um servidor web, não
+havendo necessidade de implementá-lo nos
+computadores dos usuários.
+```
+
+(a) Certo (b) Errado
+
+RESPOSTA: Letra A
+
+```
+4.[CESPE - 2010 - TCU] Caso o líder constate que os
+membros da equipe têm nível insuficiente de
+conhecimento acerca de programação segura, será
+correto ele determinar como prática geral de
+segurança que se use assinatura digital em todos os
+códigos produzidos durante o desenvolvimento do
+sistema, especialmente nos applets e nas aplicações
+distribuídas que usam o modelo Java web start.
+```
+
+Nessa situação, o uso de assinatura digital evitará que
+vulnerabilidades presentes no código produzido pela
+equipe sejam exploradas indevidamente quando o
+código for executado na plataforma do cliente.
+
+(a) Certo (b) Errado
+
+RESPOSTA: Letra A
+
+```
+5.[UFBA - 2012 - UFBA] No Java, a anotação
+@Override, na declaração de um método, indica que
+esse método tem o objetivo de sobreescrever a
+declaração de um método em uma superclasse.
+```
+
+(a) Certo (b) Errado
+
+RESPOSTA: Letra A
+
+```
+6.[FCC - 2009 - PGE/RJ] Um JavaBean para ser
+salvo em arquivo, ou enviado de um computador
+para outro, em aplicações distribuídas, deve
+implementar a interface
+```
+
+(a) java.io.DataOutput.Stream
+(b) java.io.ObjectOutput.Stream
+(c) java.io.Exception
+(d) java.io.Serializable
+(e) java.io.FileOutput.Stream
+
+RESPOSTA: Letra E
+
+```
+7.Qual é o resultado de compilar e rodar o programa
+abaixo?
+```
+
+```java
+import java.util.*;
+import java.util.regex.*;
+
+class ScannerTeste1 {
+    
+    public static void main(String[] args){
+      String input = "10 Applets 20 Oranges 33 Pears";
+      Scanner s = new Scanner(input).useDelimiter("\\d\\d");
+          while (s.hasNext()){
+              System.out.print(s.hasNext());
+          }
+          s.close();
+    }
+}
+```
+
+(a) Erro de compilação
+(b) Imprime 10 20 33
+(c) Imprime apples oranges pears
+(d) Nenhuma das alternativas
+
+
+RESPOSTA: Letra C
+
+```
+8.Preencha os espaços de maneira apropriada de
+modo que a saída seja 5.
+```
+
+```java
+import java.io.*;
+class A implements Serializable{int x = 5;}
+class SerializeTeste1 {
+    public static void main(String[] args){
+        File f = new File("a.txt");
+        ObjectOutputStream oos = new ______ (new _______ (oos.writeObject(new  _______ ())));
+        oos.close();
+      
+        ObjectOutputStream ois = new ______ (new _______ (oos.writeObject(new  _______ ())));
+        A obj = (______) _______.readObject();
+        System.out.println(obj.x);
+        ois.close();
+    }
+}
+```
+
+(a) ObjectOutputStream, FileOutputStream, f, A,
+ObjectInputStream, FileInputStream, f, A, ois
+
+(b) ObjectInputStream, FileInputStream, f, A,
+ObjectInputStream, FileInputStream, f, A, ois
+
+(c) FileOutputStream, ObjectOutputStream, A, f,
+ObjectInputStream, FileInputStream, f, A, ois
+
+(d) ObjectOutputStream, FileOutputStream, f, A,
+ObjectOutputStream, FileOutputStream, f, A, ois
+
+RESPOSTA: Letra A
+
+```
+9. Qual das alternativas abaixo é filtro de fluxo do
+pacote java.io?
+```
+
+(a) OutputStream
+(b) BufferedInputStream
+(c) FileInputStream
+(d) InputStream
+
+RESPOSTA: Letra B
+
+```
+10. Preencha os espaços com os nomes dos métodos
+da classe File que correspondem com a descrição:
+```
+
+Checa se um arquivo é um diretório: ______
+Apaga um diretório: ________
+Obtem um Array de Strings contendo os nomes dos arquivos dos diretorios _____
+Verifica se a aplicação pode ler o Arquivo _______
+
+(a) isDirectory, erase, show, canRead
+(b) isFile, delete, list, canWrite
+(c) isDirectory, delete, list, canRead
+(d) isDirectory, delete, listAll, canWrite
+
+RESPOSTA: Letra C
+
+```
+GABARITO 
+1 – C; 2 – A; 3 - A; 4 – B; 5 – A; 6 – D; 7 – C; 8 – A; 
+9 – B; 10 – C
+```

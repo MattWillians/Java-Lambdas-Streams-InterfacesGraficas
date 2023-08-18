@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE properties SYSTEM
+        "http://java.sun.com/dtd/properties.dtd">
+
+<properties>
+    <entry key='1'>http://www.siteLegal.br</entry>
+    <entry key='2'>http://www.uol.com.br</entry>
+    <entry key='3'>http://www.oglobo.com.br</entry>
+</properties>
